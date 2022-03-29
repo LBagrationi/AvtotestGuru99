@@ -39,6 +39,8 @@ it("Login via access credentials", () => {
     cy.get("h2.barone").should("be.visible");
     cy.get(".heading3").scrollIntoView().should("be.visible");
 
+    cy.get('table[class="layout1"]').find('img').should('have.attr', 'src');
+
     cy.get('a[href*="Customerhomepage.php"]').contains('Customer').scrollIntoView().should("be.visible");
     cy.get('a[href*="MiniStatementInput.php"]').contains('Mini Statement').scrollIntoView().should("be.visible");
     cy.get('a[href*="Logout.php"]').contains('Log out').scrollIntoView().should("be.visible")
