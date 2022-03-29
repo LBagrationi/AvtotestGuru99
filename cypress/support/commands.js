@@ -10,3 +10,4 @@ Cypress.Commands.add('getUserNameAndPassword', () => {
         });
     });
 });
+
