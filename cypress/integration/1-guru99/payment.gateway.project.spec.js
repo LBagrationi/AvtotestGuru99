@@ -53,7 +53,7 @@ cy.get("input[name='submit']").scrollIntoView().should("be.visible")
     . click();
 cy.get("h2").contains("Payment successfull!").scrollIntoView().should("be.visible");
 cy.get("table[class='alt access']").scrollIntoView().should("be.visible");
-cy.get('a[href*="index.html"]').contains('Home').click();
+cy.get('a[href*="purchasetoy.php"]').contains('Home').click();
 cy.url().should('eq','https://demo.guru99.com/payment-gateway/process_purchasetoy.php');
 });
 });
