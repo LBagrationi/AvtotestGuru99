@@ -14,9 +14,5 @@ describe("home page", () => {
    .type("demoguru99@mailforspam.com");
   cy.get("input[name='btnLogin']").scrollIntoView().should("be.visible")
    . click();
-  cy.getUserNameAndPassword().then(credentials => {
-  cy.log(credentials.userId)
-  cy.log(credentials.password)
-})
   });
 });
