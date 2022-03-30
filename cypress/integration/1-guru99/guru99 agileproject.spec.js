@@ -1,6 +1,6 @@
-describe("home page", () => {
+describe("Agile project", () => {
     beforeEach(() => {
-     cy.visit("https://demo.guru99.com/Agile_Project/Agi_V1/");
+     cy.visit("http://demo.guru99.com/Agile_Project/Agi_V1/");
 });
 
 it("Home Page should be correct", () => {

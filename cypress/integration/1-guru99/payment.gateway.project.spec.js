@@ -1,9 +1,9 @@
-describe("home page", () => {
+describe("Payment gateway", () => {
     beforeEach(() => {
      cy.visit("https://demo.guru99.com/payment-gateway/index.php");
 });
 
-it("Payment Gateway Project page must be correct", () => {
+it("Successful toy purchase", () => {
     cy.get("#site-name").contains("a", "Demo Site").should("be.visible");
     cy.get('img[alt="Guru99 Demo Sites"]').should("be.visible");
     cy.get(".navbar").should("be.visible");
@@ -17,7 +17,7 @@ it("Payment Gateway Project page must be correct", () => {
     cy.get("form > .row > :nth-child(2)").scrollIntoView().should("be.visible");
     cy.get('div[class="6u 12u$(small)"]').contains('h3', 'Price: $20').scrollIntoView().should("be.visible");
     cy.get("h4").contains("Quantity: ").scrollIntoView().should("be.visible");
-    cy.get("select[name='quantity']").scrollIntoView().should("be.visible").select('2');
+    cy.get("select[name='quantity']").scrollIntoView().should("be.visible").select('1');
     cy.get('input[value="Buy Now"]').scrollIntoView().should("be.visible").click();
 
     cy.url().should('eq','https://demo.guru99.com/payment-gateway/process_purchasetoy.php');
@@ -32,7 +32,7 @@ it("Payment Gateway Project page must be correct", () => {
 
     cy.get("h2").contains("Payment Process").scrollIntoView().should("be.visible");
     cy.get('div[class="6u 12u$(xsmall)"]').contains('Pay Ammount').scrollIntoView().should("be.visible");
-    cy.get('div[class="6u 12u$(xsmall)"]').contains('$40.00').scrollIntoView().should("be.visible");
+    cy.get('div[class="6u 12u$(xsmall)"]').contains('$20.00').scrollIntoView().should("be.visible");
 
     cy.get("h4").contains("We accept").scrollIntoView().should("be.visible");
     cy.get('div[class="6u$ 12u$(xsmall)"]').find('img')

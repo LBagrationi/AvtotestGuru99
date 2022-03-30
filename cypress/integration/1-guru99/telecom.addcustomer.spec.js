@@ -1,4 +1,4 @@
-describe("home page", () => {
+describe("Telecom / Adding Customer", () => {
     beforeEach(() => {
      cy.visit("https://demo.guru99.com/telecom/index.html");
 });
