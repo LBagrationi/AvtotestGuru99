@@ -22,10 +22,13 @@ it("Payment page is correct", () => {
 });
 
 it('New card creation', function () {
-        cy.visit('https://the-internet.herokuapp.com/windows')
-        cy.get('a[href*="cardnumber.php"]').invoke('removeAttr', 'target').click();
+        
+        cy.get('a[href*="cardnumber.php"]').invoke('removeAttr', 'target').eq(1).click();
         cy.url()
             .should('include', 'https://demo.guru99.com/payment-gateway/cardnumber.php');
-        cy.get('h2').should('have.text', 'Here is your New Card')
+        cy.get('h2').should('have.text', 'Here is your New Card');
+        cy.get('img').should('have.attr', 'src', 'images/card/temp-94.jpg')
+    .should("be.visible");
+    cy.get('h4').should('have.text', 'Card Number:');
 });
 });

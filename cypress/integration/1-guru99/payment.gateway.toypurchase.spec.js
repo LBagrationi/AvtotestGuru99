@@ -57,11 +57,5 @@ cy.get('a[href*="purchasetoy.php"]').contains('Home').click();
 cy.url().should('eq','https://demo.guru99.com/payment-gateway/purchasetoy.php');
 });
 
-it('New card creation', function () {
-        cy.visit('https://the-internet.herokuapp.com/windows')
-        cy.get('a[href*="cardnumber.php"]').invoke('removeAttr', 'target').click();
-        cy.url()
-            .should('include', 'https://demo.guru99.com/payment-gateway/cardnumber.php');
-        cy.get('h2').should('have.text', 'Here is your New Card')
-});
+
 });
